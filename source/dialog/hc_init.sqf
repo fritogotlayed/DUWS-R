@@ -1,4 +1,4 @@
-// _center = createCenter sideLogic;   un center existe déjà
+// _center = createCenter sideLogic;   un center existe dï¿½jï¿½
 
 // create && synchronize HC
 _grplogic = createGroup sideLogic;

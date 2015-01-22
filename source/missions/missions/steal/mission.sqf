@@ -8,7 +8,6 @@ _initpos = getpos hq_blu1;
 // CREATE NAME
 _mission_name = MissionNameCase1;
 
-
 // CREATE MARKER (ICON)
 _markername = format["resc%1%2",round(_randompos select 0),round(_randompos select 1)]; // Define marker name
 _markerstr = createMarker [str(_markername), _randompos];
@@ -42,7 +41,6 @@ _box2 setDir 75;
 _box3 attachTo [_truck1,[0.1,-3.0,-0.8]];
 _box3 setdir 180;
 
-
 // TASK AND NOTIFICATION
 _taskhandle = player createSimpleTask ["taskSteal"];
 _taskhandle setSimpleTaskDescription ["An enemy truck full of supplies has been spotted in the area. Find it and bring it back to the base in one piece.",_mission_name,""];
@@ -65,7 +63,6 @@ _unit = _group createUnit ["O_Soldier_SL_F", _missionpos, [], 0, "FORM"];
 _unit = _group createUnit ["O_Soldier_LAT_F", _missionpos, [], 0, "FORM"];
 _unit = _group createUnit ["O_soldier_F", _missionpos, [], 0, "FORM"];
 
-
 // MISSION COMPLETED --   ATTENDRE QUE LE CAMION SOIT ARRIVE A LA BASE OU DETRUIT  
 waitUntil {sleep 2; ((getdammage _truck1)>0.95 OR (_truck1 distance _initpos)<50)};  
 
@@ -75,9 +72,8 @@ deleteMarker str(_markername);
 
 player removeSimpleTask _taskhandle;
 
-if (getdammage _truck1>0.95) exitWith
-{
-  ["TaskFailed",["","The enemy convoy is destroyed"]] call bis_fnc_showNotification;
+if (getdammage _truck1>0.95) exitWith {
+    ["TaskFailed",["","The enemy convoy is destroyed"]] call bis_fnc_showNotification;
 };
 
 // IF THE MISSION IS COMPLETE

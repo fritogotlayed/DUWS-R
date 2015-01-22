@@ -6,32 +6,20 @@ _MissionPos = _this select 4;
 _markername2 = _this select 5;
 _trg = _this select 6;
 
-
-
-
 // remove markers
 deleteMarker str(_markername2);
 deleteMarker str(_markername);
-
 
 private "_task";
 _taskgeneratedName = format ["rescue%1%2",round(_MissionPos select 0),round(_Missionpos select 1)]; // generate taskname/variable name
 call compile format["_task = %1",_taskgeneratedname]; // recall variable and inject it into handle
 
-
 player removeSimpleTask _task;
 
-
 // IF SOLDIERS DEAD
-if (!(alive _sol1) && !(alive _sol2) && !(alive _sol3)) exitWith
-  {
+if (!(alive _sol1) && !(alive _sol2) && !(alive _sol3)) exitWith {
     ["TaskFailed",["","Rescue the friendly troops"]] call bis_fnc_showNotification;
-    
-  };
-
-
-
- 
+};
 
 // JOIN PLAYER
 _sol1 setcaptive false;

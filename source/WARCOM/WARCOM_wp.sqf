@@ -7,6 +7,4 @@ _group setCombatMode "RED";
     _wp setWaypointType "SAD";
 	_wp setWaypointCompletionRadius 40;
 	_wp setWaypointTimeout [300, 450, 600]; 
-}
-forEach WARCOM_createdZones;
-
+} forEach WARCOM_createdZones;

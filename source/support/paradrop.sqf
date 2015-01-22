@@ -2,10 +2,10 @@ _target = _this select 0;
 
 _lz = getpos _target;
 
-if (commandpointsblu1<25) exitWith  
-{
-  ["info",["Not enough command points","Not enough Command Points (25CP required)"]] call bis_fnc_showNotification;
+if (commandpointsblu1<25) exitWith {
+    ["info",["Not enough command points","Not enough Command Points (25CP required)"]] call bis_fnc_showNotification;
 };
+
 commandpointsblu1 = commandpointsblu1 - 25;
 publicVariable "commandpointsblu1";
 
@@ -55,7 +55,6 @@ _parachute3 = "Steerable_Parachute_F" CreateVehicle _lz;
 _parachute3 setPos [(_lz select 0)+(random _radius)-(random _radius), (_lz select 1)+(random _radius)-(random _radius), (_lz select 2)+150];
 _soldier3 = _group createUnit ["B_Soldier_ar_F",[0,0,0],[],0,"form"];
 _soldier3 moveindriver _parachute3;
-
 
 sleep 60;
 

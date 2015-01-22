@@ -1,13 +1,13 @@
-/* #Tunama
+/*
 $[
-	1.062,
-	["azeazeaze",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
-	[1800,"squadmng_mainframe",[2,"SQUAD MANAGER",["0.04 * GUI_GRID_W + GUI_GRID_X","8.02 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","17 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1801,"dismiss_frame",[2,"Add squad members to High Command",["0.5 * GUI_GRID_W + GUI_GRID_X","9 * GUI_GRID_H + GUI_GRID_Y","39 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"dismissbutton",[2,"Add yellow team to High Command control",["8.5 * GUI_GRID_W + GUI_GRID_X","13 * GUI_GRID_H + GUI_GRID_Y","24.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Add the squad members under your control with High Command","-1"],[]],
-	[1000,"dismiss_txt_info",[2,"Dismiss the squad members under the yellow team of your squad and add them under you control with High Command",["1 * GUI_GRID_W + GUI_GRID_X","10 * GUI_GRID_H + GUI_GRID_Y","38 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1802,"HCdismiss_frame",[2,"Add High Command squad directly under your control",["0.5 * GUI_GRID_W + GUI_GRID_X","15 * GUI_GRID_H + GUI_GRID_Y","39 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1001,"dismissHC_txt",[2,"Dismiss a squad from the High Command and add the units directly under your control. Once you have clicked the button, you'll have 10 seconds to select a squad. Then, this squad will be dismissed and all units added directly under your control.",["1 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","38 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1601,"dismissHC_button",[2,"Put units of selected HC squad under your command",["8.5 * GUI_GRID_W + GUI_GRID_X","19 * GUI_GRID_H + GUI_GRID_Y","24.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Dismiss a HC squad and add the units under your direct control","-1"],[]]
+    1.062,
+    ["azeazeaze",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+    [1800,"squadmng_mainframe",[2,"SQUAD MANAGER",["0.04 * GUI_GRID_W + GUI_GRID_X","8.02 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","17 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1801,"dismiss_frame",[2,"Add squad members to High Command",["0.5 * GUI_GRID_W + GUI_GRID_X","9 * GUI_GRID_H + GUI_GRID_Y","39 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1600,"dismissbutton",[2,"Add yellow team to High Command control",["8.5 * GUI_GRID_W + GUI_GRID_X","13 * GUI_GRID_H + GUI_GRID_Y","24.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Add the squad members under your control with High Command","-1"],[]],
+    [1000,"dismiss_txt_info",[2,"Dismiss the squad members under the yellow team of your squad and add them under you control with High Command",["1 * GUI_GRID_W + GUI_GRID_X","10 * GUI_GRID_H + GUI_GRID_Y","38 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1802,"HCdismiss_frame",[2,"Add High Command squad directly under your control",["0.5 * GUI_GRID_W + GUI_GRID_X","15 * GUI_GRID_H + GUI_GRID_Y","39 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1001,"dismissHC_txt",[2,"Dismiss a squad from the High Command and add the units directly under your control. Once you have clicked the button, you'll have 10 seconds to select a squad. Then, this squad will be dismissed and all units added directly under your control.",["1 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","38 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1601,"dismissHC_button",[2,"Put units of selected HC squad under your command",["8.5 * GUI_GRID_W + GUI_GRID_X","19 * GUI_GRID_H + GUI_GRID_Y","24.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Dismiss a HC squad and add the units under your direct control","-1"],[]]
 ]
 */

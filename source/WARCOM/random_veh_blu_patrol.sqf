@@ -15,24 +15,22 @@ _found = false;
 
 _foundVeh = "";
 while {!_found} do {
-_checked_veh = _cfgVehicles select round (random _realentries);  // RANDOMLY SELECT AN ENTRY
-_classname = configName _checked_veh;
-if (isClass _checked_veh) then { // CHECK IF THE SELECTED ENTRY IS A CLASS
-//hintSilent format["%1",_classname];
-sleep 0.005;
-_actual_vehclass = getText (_checked_veh >> "vehicleClass");
-_actual_faction = getText (_checked_veh >> "faction");
-_scope = getNumber (_checked_veh >> "scope"); // check if actually present in editor
-_simulation_paracheck = getText (_checked_veh >> "simulation"); // check if not a parachute
-
-
-   if (_actual_vehclass == _vehClass && _actual_faction == _faction && _scope != 0 && _simulation_paracheck != "parachute") exitWith {  
-//   hintSilent format["%1",_classname];
-//   _veh = createVehicle [_classname, _position, [], 0, _vehClass];
-   _foundVeh = _classname;
-   _found = true;
-   };
-  };   
+    _checked_veh = _cfgVehicles select round (random _realentries);  // RANDOMLY SELECT AN ENTRY
+    _classname = configName _checked_veh;
+    if (isClass _checked_veh) then { // CHECK IF THE SELECTED ENTRY IS A CLASS
+        //hintSilent format["%1",_classname];
+        sleep 0.005;
+        _actual_vehclass = getText (_checked_veh >> "vehicleClass");
+        _actual_faction = getText (_checked_veh >> "faction");
+        _scope = getNumber (_checked_veh >> "scope"); // check if actually present in editor
+        _simulation_paracheck = getText (_checked_veh >> "simulation"); // check if not a parachute
+        if (_actual_vehclass == _vehClass && _actual_faction == _faction && _scope != 0 && _simulation_paracheck != "parachute") exitWith {
+            //   hintSilent format["%1",_classname];
+            //   _veh = createVehicle [_classname, _position, [], 0, _vehClass];
+           _foundVeh = _classname;
+           _found = true;
+        };
+    };
 };   // --- VEHICLE FOUND --> _foundVeh
 
 // DETERMINE LA FACTION
@@ -51,5 +49,3 @@ _opf_assault = [_vehGroup] execVM "WARCOM\WARCOM_wp_blu_patrol.sqf";
 //_crews = _createdVehFnc select 1;   //
 //_driver = _crews select 0;          //DEBUG
 //addSwitchableUnit _driver;          //
-
-

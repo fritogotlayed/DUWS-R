@@ -1,5 +1,4 @@
 // Abilities based on the players accumulated experience is enabled here.
-
 waitUntil {sleep 2; experience_total>=5};
 _handle = [player] execVM "persistent\experience\experience_ability_stamina.sqf";
 ["new_ability",["New ability: Enhanced Conditioning","Boost your endurance, evade and escape enemies"]] call bis_fnc_showNotification;
@@ -7,7 +6,6 @@ _handle = [player] execVM "persistent\experience\experience_ability_stamina.sqf"
 _index = player createDiarySubject ["abilities_info","Abilities"];
 player createDiaryRecord ["abilities_info", ["Abilities", "Each time you will earn a new ability, a new entry will appear inside this tab and you'll be able to read its description. Access the abilities with the radio menu (0-0)."]];
 player createDiaryRecord ["abilities_info", ["Enhanced Conditioning", "<font color='#FF0000'>Cool down: 180 seconds</font color><br />Description:<br />When activated through the radio menu, you get a 20 seconds boost where you can run, sprint up mountains and aim without any effect on your stamina. Use this to quickly evade enemies or for quick exfiltration."]];
-
 
 waitUntil {sleep 2; experience_total>=15};
 if (!isMultiplayer) then {
@@ -48,9 +46,7 @@ if (!isMultiplayer) then {
     _handle = [player] execVM "persistent\experience\experience_ability_logistic.sqf";
     ["new_ability",["New ability: Logistic Support","They're sending lots of ressources your way"]] call bis_fnc_showNotification;
     player createDiaryRecord ["abilities_info", ["Logistic Support", "<font color='#FF0000'>Cooldown: 15 minutes (passive)</font color><br />Description:<br />This passive ability gives you +1 command point every 15 minutes."]];
-}
-else
-{
+} else {
     _handle = [player] execVM "persistent\experience\experience_ability_logistic_boost.sqf";
     ["new_ability",["New ability: Logistic Boost","We are committed to winning."]] call bis_fnc_showNotification;
     player createDiaryRecord ["abilities_info", ["Logistic Boost", "<font color='#FF0000'>Cooldown: 30 minutes (passive)</font color><br />Description:<br />This passive ability gives you +5 command point every 30 minutes."]];

@@ -1,18 +1,18 @@
 //0 setFog [0.1, 0.09, 10]
-// 1Ëre valeur: --> INTENSITE BROUILLARD
-// 2Ëme valeur: rester entre 0.01(haut) et 0.1(bas)  --> hauteur brouillard
-// 3Ëme valeur: mieux vaut rester ‡ 10 --> hauteur de base
+// 1√®re valeur: --> INTENSITE BROUILLARD
+// 2√®me valeur: rester entre 0.01(haut) et 0.1(bas)  --> hauteur brouillard
+// 3√®me valeur: mieux vaut rester √† 10 --> hauteur de base
 
 //  fog
-// tropical --> intensitÈ (0.3 - 0.9) Hauteur totalement variable
-// mediter  --> intensitÈ (0.5 - 0.0)
-// tempÈrÈ  --> intensitÈ (0.75 - 0.0)
-// tempÈrÈ froid  --> intensitÈ (0.75 - 0.0)
+// tropical --> intensit√© (0.3 - 0.9) Hauteur totalement variable
+// mediter  --> intensit√© (0.5 - 0.0)
+// temp√©r√©  --> intensit√© (0.75 - 0.0)
+// temp√©r√© froid  --> intensit√© (0.75 - 0.0)
 // aride 0
 
 // 0 setOvercast 0.9
-// tempÈrÈ 0.3 - 0.8
-// tempÈrÈ froid 0.4 - 0.8
+// temp√©r√© 0.3 - 0.8
+// temp√©r√© froid 0.4 - 0.8
 // tropical 0 - 1
 // medit 0 - 0.6
 // aride 0 - 0.3
@@ -30,7 +30,7 @@ switch (weather_type) do {
             _fog_time = random 60; // EN MINUTES !!
             _fog_time = (_fog_time * 60); // transforme en secondes
             _fog_intensity = random 6;
-            _fog_intensity = (_fog_intensity / 10); // transforme en dix?mes
+            _fog_intensity = (_fog_intensity / 10); // transforme en dix√®mes
             _fog_intensity = (_fog_intensity + 0.3); // donne la valeur min
             if (_fog_intensity<0.01) then {_fog_intensity = 0.01};
             _fog_height = random 1;
@@ -57,7 +57,7 @@ switch (weather_type) do {
             1 setFog [0.01, 0.01, 0.01];
 
             _overcast_intensity = random 3;
-            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi?mes
+            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi√®mes
             20 setOvercast _overcast_intensity;
 
             _fog_time = 0;
@@ -73,7 +73,7 @@ switch (weather_type) do {
             _fog_time = random 60; // EN MINUTES !!
             _fog_time = (_fog_time * 60); // transforme en secondes
             _fog_intensity = random 8;
-            _fog_intensity = (_fog_intensity / 10); // transforme en dix?mes
+            _fog_intensity = (_fog_intensity / 10); // transforme en dix√®mes
             if (_fog_intensity<0.01) then {_fog_intensity = 0.01};
             _fog_height = random 1;
             _fog_height = (_fog_height / 10); // transforme en centiemes
@@ -82,7 +82,7 @@ switch (weather_type) do {
             _fog_time setFog [_fog_intensity, _fog_height, 10];
 
             _overcast_intensity = random 5;
-            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi?mes
+            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi√®mes
             _overcast_intensity = (_overcast_intensity + 0.3);  // ajoute la val min
             20 setOvercast _overcast_intensity;
 
@@ -98,7 +98,7 @@ switch (weather_type) do {
             _fog_time = random 60; // EN MINUTES !!
             _fog_time = (_fog_time * 60); // transforme en secondes
             _fog_intensity = random 8;
-            _fog_intensity = (_fog_intensity / 10); // transforme en dix?mes
+            _fog_intensity = (_fog_intensity / 10); // transforme en dix√®mes
             if (_fog_intensity<0.01) then {_fog_intensity = 0.01};
             _fog_height = random 1;
             _fog_height = (_fog_height / 10); // transforme en centiemes
@@ -107,7 +107,7 @@ switch (weather_type) do {
             _fog_time setFog [_fog_intensity, _fog_height, 10];
 
             _overcast_intensity = random 4;
-            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi?mes
+            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi√®mes
             _overcast_intensity = (_overcast_intensity + 0.4);  // ajoute la val min
             20 setOvercast _overcast_intensity;
 
@@ -123,7 +123,7 @@ switch (weather_type) do {
             _fog_time = random 60; // EN MINUTES !!
             _fog_time = (_fog_time * 60); // transforme en secondes
             _fog_intensity = random 5;
-            _fog_intensity = (_fog_intensity / 10); // transforme en dix?mes
+            _fog_intensity = (_fog_intensity / 10); // transforme en dix√®mes
             if (_fog_intensity<0.01) then {_fog_intensity = 0.01};
             _fog_height = random 1;
             _fog_height = (_fog_height / 10); // transforme en centiemes
@@ -132,7 +132,7 @@ switch (weather_type) do {
             _fog_time setFog [_fog_intensity, _fog_height, 10];
 
             _overcast_intensity = random 6;
-            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi?mes
+            _overcast_intensity = (_overcast_intensity / 10); // transforme en dixi√®mes
             20 setOvercast _overcast_intensity;
             diag_log format ["DUWS-R DEBUG: %3 setOvercast %1", _overcast_intensity];
 

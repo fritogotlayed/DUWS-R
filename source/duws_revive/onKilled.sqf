@@ -10,7 +10,7 @@ player setpos _deathPos;
 
 DUWS_player_injured = true;
 
-  _handle = createDialog "duws_revive_menu";  
-  waitUntil {dialog};
+_handle = createDialog "duws_revive_menu";
+waitUntil {dialog};
   
-  [player,"DUWS_revive_addaction"] spawn BIS_fnc_MP;
+[player,"DUWS_revive_addaction"] spawn BIS_fnc_MP;

@@ -11,17 +11,15 @@ amount_zones_captured = amount_zones_captured - 1;
 // remove the zone of list of zones under blu control
 _index = 0;
 {
-if ((_x select 0 == _triggerPos select 0) && (_x select 1 == _triggerPos select 1) && (_x select 2 == _triggerPos select 2)) exitWith {
-WARCOM_zones_controled_by_BLUFOR set [_index,-1];
-WARCOM_zones_controled_by_BLUFOR = WARCOM_zones_controled_by_BLUFOR - [-1];
-}; 
-_index = _index + 1;
+    if ((_x select 0 == _triggerPos select 0) && (_x select 1 == _triggerPos select 1) && (_x select 2 == _triggerPos select 2)) exitWith {
+        WARCOM_zones_controled_by_BLUFOR set [_index,-1];
+        WARCOM_zones_controled_by_BLUFOR = WARCOM_zones_controled_by_BLUFOR - [-1];
+    };
+    _index = _index + 1;
 } forEach WARCOM_zones_controled_by_BLUFOR;
 
 // TELL THE ZONE IS UNDER OPF CONTROL
 WARCOM_zones_controled_by_OPFOR = WARCOM_zones_controled_by_OPFOR + [_triggerPos];
-
-
 
 // MODIFY NUMBER OF CONTROLLED ZONES
 zoneundercontrolblu = zoneundercontrolblu - 1;
@@ -45,5 +43,3 @@ call compile format["_trg = trigger%1%2",round (_triggerPos select 0),round (_tr
 //// MAKE THE TRIGGER CAPTURABLE FOR OPFOR
 _trg setTriggerActivation["WEST SEIZED","PRESENT",true];
 _trg setTriggerStatements["this", format["[""%1"",%2,""%3"",""%4"",%5] execvm 'zonescap\blufor_cap.sqf'",_place,_points,_markername,_markername2,_triggerPos], ""];
-
-

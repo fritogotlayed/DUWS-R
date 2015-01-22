@@ -63,7 +63,7 @@ while {_counter < 6;} do {
                 _radius = 300;
                 MissionNameCase0 = [0] call compile preprocessFile "random_name.sqf";
                 PosOfCase0Mission = _foundSafepos;
-    
+
                 _missionArray = [
                     [(_foundSafepos select 0)+(random _radius)-(random _radius),(_foundSafepos select 1)+(random _radius)-(random _radius)],
                     {_handle = [PosOfCase0Mission] execVM "missions\missions\rescue\mission.sqf"; _handle = execVM "missions\missionTimer.sqf"},
@@ -100,7 +100,7 @@ while {_counter < 6;} do {
                 _radius = 300;
                 MissionNameCase2 = [0] call compile preprocessFile "random_name.sqf";
                 PosOfCase2Mission = _foundSafepos;
-    
+
                 _missionArray = [
                     [(_foundSafepos select 0)+(random _radius)-(random _radius),(_foundSafepos select 1)+(random _radius)-(random _radius)],
                     {_handle = [PosOfCase2Mission] execVM "missions\missions\target\mission.sqf"; _handle = execVM "missions\missionTimer.sqf"},
@@ -118,7 +118,7 @@ while {_counter < 6;} do {
                 _radius = 300;
                 MissionNameCase3 = [0] call compile preprocessFile "random_name.sqf";
                 PosOfCase3Mission = _foundSafepos;
-    
+
                 _missionArray = [
                     [(_foundSafepos select 0)+(random _radius)-(random _radius),(_foundSafepos select 1)+(random _radius)-(random _radius)],
                     {_handle = [PosOfCase3Mission] execVM "missions\missions\destroy\mission.sqf"; _handle = execVM "missions\missionTimer.sqf"},
@@ -137,7 +137,7 @@ while {_counter < 6;} do {
                 _radius = 300;
                 MissionNameCase4 = [0] call compile preprocessFile "random_name.sqf";
                 PosOfCase4Mission = _foundSafepos;
-    
+
                 _missionArray = [[(_foundSafepos select 0)+(random _radius)-(random _radius),(_foundSafepos select 1)+(random _radius)-(random _radius)],
                     {_handle = [PosOfCase4Mission] execVM "missions\missions\pilot\mission.sqf"; _handle = execVM "missions\missionTimer.sqf"},
                     MissionNameCase4,
@@ -155,7 +155,7 @@ while {_counter < 6;} do {
                 _radius = 300;
                 MissionNameCase5 = [0] call compile preprocessFile "random_name.sqf";
                 PosOfCase5Mission = _foundSafepos;
-    
+
                 _missionArray = [
                     [(_foundSafepos select 0)+(random _radius)-(random _radius),(_foundSafepos select 1)+(random _radius)-(random _radius)],
                     {_handle = [PosOfCase5Mission] execVM "missions\missions\sabotage\mission.sqf"; _handle = execVM "missions\missionTimer.sqf"},

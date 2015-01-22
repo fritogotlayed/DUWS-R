@@ -1,8 +1,6 @@
-
 // R_60mm_HE / R_80mm_HE /Bo_Air_LGB(no sounds)/ Grenade / Bo_Mk82
 //
 // _null = [1, 250, 1, 90, 1, 5, "grenade"] execVM "support\cluster\mapclickcluster.sqf"
-//
 
 _position = _this select 0;
 _salvos = _this select 1;
@@ -12,8 +10,6 @@ _rps = _this select 4;
 _supportype = _this select 5; // 1 = arty, 2 = mortar, 3 = jdam
 _cost = _this select 6;
 _ammotype = _this select 7;
-
-
 
 _rpsinit = _rps;
 
@@ -32,21 +28,18 @@ _markerstr setMarkerShape "ELLIPSE";
 str(_markername) setMarkerColor "ColorGrey";
 str(_markername) setMarkerSize [_radius,_radius]; 
 
-
 // make HQ zone notification trigger
 _trg5=createTrigger["EmptyDetector",_position];
 _trg5 setTriggerArea[_radius,_radius,0,false];
 _trg5 setTriggerActivation["ANY","PRESENT",true];
 _trg5 setTriggerStatements["this","", ""];
 
-
-
-
 // create unit for comms
 _group = createGroup west;
 _unit = _group createUnit ["B_Soldier_SL_F", [0,0,0], [], 0, "FORM"];
 _unit allowDamage false;
-// generate randomname
+
+// generate random name
 _fobname = [1] call compile preprocessFile "random_name.sqf";
 _random1 = round random 9;
 _random2 = round random 9; 
@@ -60,34 +53,27 @@ sleep 30;
 _unit sidechat format["CBUs released, splash in 20 seconds."];
 sleep 20;
 
-
-
-
 // NUMBER OF SALVOS
 while {_salvos>0} do {
-_rps = _rpsinit; // reset number of remaining rounds for next salvo
-
-
-while {_rps>0} do { // FIRE SALVO
-_bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
-_bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
-_bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
-_bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
-sleep ((random 1)/50);
-_rps = _rps-1 // REMOVE 1 ROUND TO SALVO
-};
-
-_salvos = _salvos-1; // remove 1 salvo to counter
-sleep _interval;
+    _rps = _rpsinit; // reset number of remaining rounds for next salvo
+    while {_rps>0} do { // FIRE SALVO
+        _bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
+        _bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
+        _bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
+        _bomb= _ammotype createVehicle [(_position select 0)+(random _radius)-(random _radius), (_position select 1)+(random _radius)-(random _radius), (_position select 2)]; //spawn shells
+        sleep ((random 1)/50);
+        _rps = _rps-1 // REMOVE 1 ROUND TO SALVO
+    };
+    _salvos = _salvos-1; // remove 1 salvo to counter
+    sleep _interval;
 };
 sleep 3;
 
-
 _vehlist = list _trg5;
 {
-_modif = (random 10)/10;
-_vehlife = getdammage _x;
-_x setdammage (_vehlife + 0.7 + _modif);
+    _modif = (random 10)/10;
+    _vehlife = getdammage _x;
+    _x setdammage (_vehlife + 0.7 + _modif);
 } forEach _vehlist;
 sleep 3;
 _unit sidechat format["This is %1 %2-%3, target hit.",_fobname,_random1,_random2];

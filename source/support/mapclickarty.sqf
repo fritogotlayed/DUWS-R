@@ -10,26 +10,22 @@ _supportype = _this select 4; // 1 = arty, 2 = mortar, 3 = jdam
 _cost = _this select 5; 
 _ammotype = _this select 6;
 
-
-
 _timer = 60;
 clicked = false;
 
 // IF NOT ENOUGH PTS
 if (commandpointsblu1<_cost) exitWith {
-  ["info",["Support","You don't have enough command points"]] call bis_fnc_showNotification;
-  sleep 30;
-if (_supportype==1) exitWith {
-_art = [player1,"artillery"] call BIS_fnc_addCommMenuItem;
-};
-
-if (_supportype==2) exitWith {
-_art = [player1,"mortar"] call BIS_fnc_addCommMenuItem;
-};
-
-if (_supportype==3) exitWith {
-_art = [player1,"JDAM"] call BIS_fnc_addCommMenuItem;
-};
+    ["info",["Support","You don't have enough command points"]] call bis_fnc_showNotification;
+    sleep 30;
+    if (_supportype==1) exitWith {
+        _art = [player1,"artillery"] call BIS_fnc_addCommMenuItem;
+    };
+    if (_supportype==2) exitWith {
+        _art = [player1,"mortar"] call BIS_fnc_addCommMenuItem;
+    };
+    if (_supportype==3) exitWith {
+        _art = [player1,"JDAM"] call BIS_fnc_addCommMenuItem;
+    };
 };
 
 _pos = [];
@@ -39,22 +35,19 @@ OnMapSingleClick format["_null = [_pos,%2,%3,%4,%5,%6,%7,'%8'] execVM 'support\a
 
 // TIMER
 while {_timer>0 AND !clicked} do {
-
-_timer = _timer-1; // remove 1 to timer
-sleep 1;
+    _timer = _timer-1; // remove 1 to timer
+    sleep 1;
 };
 // TIMER ELLAPSED OR CLICKED
 sleep 60;
 OnMapSingleClick "";
 
 if (_supportype==1) exitWith {
-_art = [player1,"artillery"] call BIS_fnc_addCommMenuItem;
+    _art = [player1,"artillery"] call BIS_fnc_addCommMenuItem;
 };
-
 if (_supportype==2) exitWith {
-_art = [player1,"mortar"] call BIS_fnc_addCommMenuItem;
+    _art = [player1,"mortar"] call BIS_fnc_addCommMenuItem;
 };
-
 if (_supportype==3) exitWith {
-_art = [player1,"JDAM"] call BIS_fnc_addCommMenuItem;
+    _art = [player1,"JDAM"] call BIS_fnc_addCommMenuItem;
 };

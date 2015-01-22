@@ -1,6 +1,5 @@
 //  _trg = ["Outpost Airbase",5,50,this,true] execvm "createzone.sqf";
 //         Name of the place,pts,radius,this,fortified/not
-//
 
 _place   =   _this select 0; 
 _points =   _this select 1;
@@ -10,7 +9,6 @@ _fortified = _this select 4;
 
 // hint format["%1%2",round(getpos _trigger select 0),round(getpos _trigger select 1)];
 // hint format["%1",_points];
-
 
 // CREATE MARKER (ICON)
 _markername = format["%1%2",round(getpos _trigger select 0),round(getpos _trigger select 1)]; // Define marker name
@@ -30,11 +28,9 @@ _markerstr2 setMarkerShape "ELLIPSE";
 str(_markername2) setMarkerBrush "SolidBorder";
 str(_markername2) setMarkerColor "ColorRed";
 str(_markername2) setMarkerSize [_size, _size];
-str(_markername2) setMarkerAlpha 0.1; 
-
+str(_markername2) setMarkerAlpha 0.1;
 
 // hint str(_markername);
-
 
 //_markerstr = createMarker [format["%1%2",round(getpos _trigger select 0),round(getpos _trigger select 1)], getpos _trigger];
 //_markerstr setMarkerShape "ICON";
@@ -42,11 +38,8 @@ str(_markername2) setMarkerAlpha 0.1;
 //format["%1%2",round(getpos _trigger select 0),round(getpos _trigger select 1)] setMarkerColor "ColorRed";
 //format["%1%2",round(getpos _trigger select 0),round(getpos _trigger select 1)] setMarkerText _place;
 
-
 // hint format["%1",_place];
-//
-// hint format ["%1",parsenumber format["%1",_points]]; 
-
+// hint format ["%1",parsenumber format["%1",_points]];
 
 // CREATE ZONE CAPTURABLE TRIGGER
 _trg=createTrigger["EmptyDetector",getPos _trigger];
@@ -66,48 +59,47 @@ _trg2 setTriggerStatements["this", format["[""%1"",thislist] execvm 'enterlocati
 
 // CREATE OPFOR. HEAVY CLUSTERFUCK INCOMING.
 // Check if fortified is true
-if (_fortified) then  
-{
-      [getpos _trigger] execvm "createopfortified.sqf";
-      sleep 2;
+if (_fortified) then {
+    [getpos _trigger] execvm "createopfortified.sqf";
+    sleep 2;
 };
 
 // Check if radius is 100m or smaller => create 2 patrols then exit the script
-if (_size < 101) exitWith  
-{
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep (random 3);
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
+if (_size < 101) exitWith {
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
+    sleep (random 3);
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
 };
+
 // Check if radius is 250m-100m => create 2 patrols and 1 fireteam then exit the script
-if (_size < 251) exitWith  
-{
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep (random 3);
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep 2+(random 3);
-      [getpos _trigger, _size] execvm "createopteam.sqf";
+if (_size < 251) exitWith {
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
+    sleep (random 3);
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
+    sleep 2+(random 3);
+    [getpos _trigger, _size] execvm "createopteam.sqf";
 };
+
 // Check if radius is 250m-500m => create 2 patrols and 2 fireteams then exit the script
-if (_size < 501) exitWith  
-{
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep (random 3);
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep 2+(random 3);
-      [getpos _trigger, _size] execvm "createopteam.sqf";
-      sleep 3;
-      [getpos _trigger, _size] execvm "createopteam.sqf";
+if (_size < 501) exitWith {
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
+    sleep (random 3);
+    [getpos _trigger, _size] execvm "createoppatrol.sqf";
+    sleep 2+(random 3);
+    [getpos _trigger, _size] execvm "createopteam.sqf";
+    sleep 3;
+    [getpos _trigger, _size] execvm "createopteam.sqf";
 };
+
 // if superior to 500m: 3 ft 3 patrols
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep (random 3);
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep 2+(random 3);
-      [getpos _trigger, _size] execvm "createoppatrol.sqf";
-      sleep 2+(random 3);
-      [getpos _trigger, _size] execvm "createopteam.sqf";
-      sleep 3;
-      [getpos _trigger, _size] execvm "createopteam.sqf";
-      sleep 3;
-      [getpos _trigger, _size] execvm "createopteam.sqf";
+[getpos _trigger, _size] execvm "createoppatrol.sqf";
+sleep (random 3);
+[getpos _trigger, _size] execvm "createoppatrol.sqf";
+sleep 2+(random 3);
+[getpos _trigger, _size] execvm "createoppatrol.sqf";
+sleep 2+(random 3);
+[getpos _trigger, _size] execvm "createopteam.sqf";
+sleep 3;
+[getpos _trigger, _size] execvm "createopteam.sqf";
+sleep 3;
+[getpos _trigger, _size] execvm "createopteam.sqf";

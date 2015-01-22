@@ -120,7 +120,4 @@ class CfgCommunicationMenu
         enable = "1"; // Simple expression condition for enabling the item
         removeAfterExpressionCall = 1; // 1 to remove the item after calling
     };
-};                             
-
-
-
+};

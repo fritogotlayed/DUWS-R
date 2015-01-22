@@ -29,14 +29,11 @@ WARCOM_opf_ai_skill_range = _opfor_ai_skill;
 WARCOM_opf_attack_delay = _opfor_assault_delay;
 publicVariable "WARCOM_blufor_ap";
 
-
-
 // SORT ARRAY OF OPFOR ZONES ACCORDING TO DISTANCE FROM BLUHQ 
 WARCOM_createdZones = [_array_of_zones_total,[WARCOM_blu_hq_pos],{_input0 distance _x},"ASCEND"] call BIS_fnc_sortBy;
 
 // ARRAY OF ZONES UNDER BLUFOR CONTROL
 WARCOM_zones_controled_by_BLUFOR = [];
-
 
 // ARRAY OF ZONES UNDER OPFOR CONTROL 
 // make sure it's not a reference
@@ -55,12 +52,9 @@ waitUntil {scriptDone _opf_patrol};
 _blu_assault = [] execVM "WARCOM\WARCOM_blu_assault.sqf";
 waitUntil {scriptDone _blu_assault};
 
-
 // Init the OPF attack waves
 _opf_assault = [] execVM "WARCOM\WARCOM_opf_assault.sqf";
 waitUntil {scriptDone _opf_assault};
-
-
 
 WARCOM_init_done = true;
 player globalchat "WARCOM initialized !";

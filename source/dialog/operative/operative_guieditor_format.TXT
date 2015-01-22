@@ -1,4 +1,4 @@
-/* #Renaji
+/*
 $[
 	1.063,
 	["azeza",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
@@ -37,8 +37,3 @@ $[
 	[1608,"operative_add_reload",[2,"+",["25.5 * GUI_GRID_W + GUI_GRID_X","14.5 * GUI_GRID_H + GUI_GRID_Y","1 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Informations about the operatives","-1"],[]]
 ]
 */
-
-
-*/
-
-

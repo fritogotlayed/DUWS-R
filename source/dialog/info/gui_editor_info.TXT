@@ -1,5 +1,4 @@
-/* #Qezugi
-/* #Pitohi
+/*
 $[
 	1.062,
 	["aze",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
@@ -16,6 +15,3 @@ $[
 	[1000,"player_experience_text",[2,"XXX",["21 * GUI_GRID_W + GUI_GRID_X","4 * GUI_GRID_H + GUI_GRID_Y","17 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Experience of the player","-1"],[]]
 ]
 */
-
-*/
-

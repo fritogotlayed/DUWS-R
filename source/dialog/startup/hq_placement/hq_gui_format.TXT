@@ -1,9 +1,9 @@
-/* #Kedytu
+/*
 $[
-	1.063,
-	["azeaze",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
-	[1800,"hq_placement_frame",[2,"Select how the HQ is placed on the island",["10 * GUI_GRID_W + GUI_GRID_X","11 * GUI_GRID_H + GUI_GRID_Y","20 * GUI_GRID_W","8.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"hq_placement_random_button",[2,"RANDOM",["11 * GUI_GRID_W + GUI_GRID_X","12.5 * GUI_GRID_H + GUI_GRID_Y","18 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"The HQ is randomly placed somewhere on the island","-1"],[]],
-	[1601,"hq_placement_manual_button",[2,"MANUAL PLACEMENT",["11 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","18 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"You choose where the HQ is placed on the island","-1"],[]]
+    1.063,
+    ["azeaze",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+    [1800,"hq_placement_frame",[2,"Select how the HQ is placed on the island",["10 * GUI_GRID_W + GUI_GRID_X","11 * GUI_GRID_H + GUI_GRID_Y","20 * GUI_GRID_W","8.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+    [1600,"hq_placement_random_button",[2,"RANDOM",["11 * GUI_GRID_W + GUI_GRID_X","12.5 * GUI_GRID_H + GUI_GRID_Y","18 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"The HQ is randomly placed somewhere on the island","-1"],[]],
+    [1601,"hq_placement_manual_button",[2,"MANUAL PLACEMENT",["11 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","18 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"You choose where the HQ is placed on the island","-1"],[]]
 ]
 */

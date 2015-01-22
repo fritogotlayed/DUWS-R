@@ -1,8 +1,0 @@
-_this setPos \[([^,]+), ([^,\]]+)
-
-_this setPos \[\(($1)\)-_centerX\+_centerSpawnX, \(($2)\)-_centerY\+_centerSpawnY
-
-
-
-
-
